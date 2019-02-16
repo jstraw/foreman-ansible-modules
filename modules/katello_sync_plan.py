@@ -138,7 +138,7 @@ class NailGun(object):
             self._module.fail_json(msg="No Product found for %s" % name)
 
     def find_products(self, products, organization):
-        return map(lambda product: self.find_product(product['name'], organization), products)
+        return map(lambda product: self.find_product(product, organization), products)
 
     def update_fields(self, new, old, fields):
         needs_update = False
